@@ -33,7 +33,7 @@ int main(int argc, const char * argv[])
             NSFileManager *fileManager = [NSFileManager defaultManager];
             
             if (path &&
-                [path hasSuffix:@".app"] &&
+                ([path hasSuffix:@".app"] || [path hasSuffix:@".app/"]) &&
                 [fileManager fileExistsAtPath:path isDirectory:&isDirectory] &&
                 isDirectory) {
                 NSString *finalPath =
