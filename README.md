@@ -12,3 +12,13 @@ Pass the path to the Xcode app bundle, not to the `/Contents/Developer` path.
 ## Warning
 This is not 100% safe. Please exercise caution. Don’t put this on a server that
 is not otherwise secured.
+
+## Installation
+
+Copy to `/usr/local/bin` or wherever and run this command to give it the correct
+permissions:
+
+```Shell
+sudo chown root:wheel /usr/local/bin/safe-xcode-select
+sudo chmod 4755 /usr/local/bin/safe-xcode-select
+```
